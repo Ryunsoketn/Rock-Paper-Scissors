@@ -1,0 +1,110 @@
+body {
+    /* Ganti font dengan yang lebih modern */
+    font-family: 'Helvetica Neue', sans-serif; 
+    
+    /* Ganti latar belakang */
+    background-color: #3498db; /* Biru langit/cerah */
+    
+    color: #ecf0f1; /* Teks putih/terang */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #2c3e50; /* Kotak kontainer lebih gelap */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow lebih tebal */
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #f1c40f; /* Judul berwarna kuning cerah */
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #34495e;
+    border-bottom: 1px solid #34495e;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    height: 30px; 
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Gaya untuk container pilihan (untuk efek glow) */
+.choice-container {
+    border: 3px solid #ccc; /* Bingkai abu-abu dasar */
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    flex: 1; /* Agar membagi ruang secara merata */
+    margin: 0 5px;
+}
+
+.choice-container.green-glow {
+    border-color: #2ecc71; /* Hijau untuk Menang */
+    box-shadow: 0 0 15px #2ecc71;
+}
+
+.choice-container.red-glow {
+    border-color: #e74c3c; /* Merah untuk Kalah */
+    box-shadow: 0 0 15px #e74c3c;
+}
+
+.choice-container.gray-glow {
+    border-color: #95a5a6; /* Abu-abu untuk Seri */
+    box-shadow: 0 0 15px #95a5a6;
+}
+
+.choice {
+    background-color: #3498db; /* Warna tombol */
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    width: 100%; /* Agar tombol mengisi container */
+    margin: 0;
+}
+
+.choice:hover {
+    background-color: #2980b9;
+}
+
+/* Styling untuk hasil */
+.win {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.lose {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.draw {
+    color: #f1c40f;
+    font-weight: bold;
+}
